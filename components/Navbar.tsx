@@ -23,11 +23,20 @@ const Navbar = () => {
                 />
 
                 <ul className='flex-center gap-x-3 max-md:hidden md:gap-x-10'>
-                    <li>
+                    <li className='body-text text-gradient_blue-purple !font-bold'>
                         <Link
                             href="https://jsmastery.pro/next14"
+                            target='_blank'
                         >
                             Next.js 14.0 Course
+                        </Link>
+                    </li>
+                    <li className='body-text !font-normal'>
+                        <Link
+                            href="https://jsmastery.pro/masterclass"
+                            target='_blank'
+                        >
+                            MasterClass
                         </Link>
                     </li>
                 </ul>
