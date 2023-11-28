@@ -3,6 +3,8 @@ import ResourceCard from '@/components/ResourceCard'
 import SearchForm from '@/components/SearchForm'
 import { getResources } from '@/sanity/actions'
 
+export const revalidate = 9000
+
 const Page = async () => {
 
     const resources = await getResources({
@@ -32,6 +34,10 @@ const Page = async () => {
                         resources.map((resource: any) => (
                             <ResourceCard
                                 key={resource._id}
+                                title={resource.title}
+                                id={resource._id}
+                                image={resource.image}
+                                downloadNumber={resource.views}
                             />
                         ))
                     )
