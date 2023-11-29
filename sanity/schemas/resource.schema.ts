@@ -1,10 +1,3 @@
-// import { type SchemaTypeDefinition } from 'sanity'
-
-// export const schema: { types: SchemaTypeDefinition[] } = {
-//   types: [],
-// }
-
-
 const schema = {
   name: 'resource',
   title: 'Resource',
@@ -15,7 +8,7 @@ const schema = {
       title: 'Title',
       type: 'string',
       require,
-      validatioin: (Rule: any) => Rule.required()
+      validation: (Rule: any) => Rule.required()
     },
     {
       name: 'slug',
@@ -33,7 +26,7 @@ const schema = {
       name: 'views',
       title: 'Views',
       type: 'number',
-      initalValue: 0,
+      initialValue: 0,
     },
     {
       name: 'poster',
@@ -50,10 +43,10 @@ const schema = {
       type: 'string',
       validation: (Rule: any) => Rule.required(),
       options: {
-        list: ['frontend', 'backend', 'next 14', 'fullstack', 'other']
+        list: ['frontend', 'backend', 'next 13', 'fullstack', 'other']
       }
     }
   ]
-};
+}
 
 export default schema;
